@@ -1,0 +1,377 @@
+@import url('https://fonts.googleapis.com/css?family=Condiment|Roboto:300');
+
+/*
+ * Globals
+ */
+
+/* Links */
+a,
+a:focus,
+a:hover {
+  color: #fff;
+}
+
+/* Custom default button */
+.btn-secondary,
+.btn-secondary:hover,
+.btn-secondary:focus {
+  color: #333;
+  text-shadow: none; /* Prevent inheritance from `body` */
+  background-color: #fff;
+  border: .05rem solid #fff;
+}
+
+
+/*
+ * Base structure
+ */
+
+html,
+body {
+  height: 100%;
+  font-family: 'Roboto', sans-serif;
+}
+body {
+  color: #fff;
+  text-align: center;
+  text-shadow: 0 .05rem .1rem rgba(0,0,0,.5);
+}
+
+/* Extra markup and styles for table-esque vertical and horizontal centering */
+.site-wrapper {
+  display: table;
+  width: 100%;
+  height: 100%; /* For at least Firefox */
+  min-height: 100%;
+  -webkit-box-shadow: inset 0 0 5rem rgba(0,0,0,.5);
+          box-shadow: inset 0 0 5rem rgba(0,0,0,.5);
+}
+.site-wrapper-inner {
+  display: table-cell;
+  vertical-align: top;
+}
+.cover-container {
+  margin-right: auto;
+  margin-left: auto;
+}
+
+/* Padding for spacing */
+.inner {
+  padding: 2rem;
+}
+
+
+/*
+ * Header
+ */
+
+.masthead {
+  margin-bottom: 2rem;
+}
+
+.masthead-brand {
+  margin-bottom: 0;
+}
+
+ .nav-masthead .nav-link {
+  padding: .25rem 0;
+  font-weight: bold;
+  color: rgba(255,255,255,1);
+  text-shadow: 0 0 #f70000;
+  background-color: transparent;
+  border-bottom: .25rem solid transparent;
+}
+
+.nav-masthead .nav-link:hover,
+.nav-masthead .nav-link:focus {
+  border-bottom-color: rgba(255,255,255,.25);
+}
+
+.nav-masthead .nav-link + .nav-link {
+  margin-left: 1rem;
+}
+
+.nav-masthead .active {
+  color: #fff;
+  text-shadow: 0 0 #f70000;
+  border-bottom-color: #fff;
+} 
+
+@media (min-width: 48em) {
+  .masthead-brand {
+    float: left;
+  }
+  .nav-masthead {
+    float: right;
+  }
+}
+
+
+/*
+ * Cover
+ */
+
+.cover {
+  padding: 0 1.5rem;
+}
+.cover .btn-lg {
+  padding: .75rem 1.25rem;
+  font-weight: bold;
+}
+
+
+/*
+ * Footer
+ */
+
+.mastfoot {
+  color: rgba(255,255,255,1);
+}
+
+
+/*
+ * Affix and center
+ */
+
+@media (min-width: 40em) {
+  /* Pull out the header and footer */
+  .masthead {
+    position: fixed;
+    top: 0;
+  }
+  .mastfoot {
+    position: fixed;
+    bottom: 0;
+  }
+  /* Start the vertical centering */
+  .site-wrapper-inner {
+    vertical-align: middle;
+  }
+  /* Handle the widths */
+  .masthead,
+  .mastfoot,
+  .cover-container {
+    width: 100%; /* Must be percentage or pixels for horizontal alignment */
+  }
+}
+
+@media (min-width: 62em) {
+  .masthead,
+  .mastfoot,
+  .cover-container {
+    width: 42rem;
+  }
+}
+
+
+/* Body */
+body{
+    background:url('./assets/gents.png') no-repeat center center;
+    background-attachment: fixed;    
+    background-size:cover;  
+    margin-top: 56px;
+    position: relative;
+}
+/* Container sizing */
+.full-screen{
+    height: calc(100vh - 56px);    
+}
+.full-screen-minus-strip{
+    height: calc(100vh - 56px - 10vh);    
+}
+.strip{
+    height: 10vh;    
+}
+
+/* Background Colours */
+.black-bg{
+    background-color: #000;
+}
+.grey-bg{
+    background-color: rgb(200,200,200);
+}
+/*.red-bg{
+    background-color: #ad0000;
+}*/
+.red-bg{
+    background-color:#61070c;
+}
+.transparent-bg{
+    background-color: transparent;
+}
+.black-red-bg{
+  background: linear-gradient( black,black,#ad0000,#ad0000,#ad0000)
+}
+/*.opacity-90{
+    opacity: 0.9;
+}
+.opacity-95{
+    opacity: 0.95;
+}*/
+
+/* Font Colours */
+.red{
+  color: rgba(214, 214, 214, 1);
+  text-shadow: -1px -1px 6px rgba(193, 0, 0, 0.92);
+}
+.grey{
+  color: #5F5F5F;
+}
+p, h5{
+  color:rgba(255,255,255,1);
+}
+
+/* Home */
+.display-1{
+  font-family: 'Condiment', cursive;
+  font-size: 14.3vw;
+}
+
+/* Next Music */
+#music{
+  color: #000000;
+}
+
+.release{
+  font-size: 4.5vw;
+  font-family: Arial;
+  color: rgb(240,240,240);
+}
+
+/* Player */
+.previous{
+  content: url('./assets/previous.svg')
+}
+.play{
+  content: url('./assets/play.svg')
+}
+.next{
+  content: url('./assets/next.svg')
+}
+.download{
+  content: url('./assets/download.svg')
+}
+.share{
+  content: url('./assets/share.svg')
+}
+
+#player-timer{
+  width: 500px;
+  max-width: 75vw;
+  height: 10px;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.duration{
+  height: inherit;
+}
+
+.second{
+  background-color: rgba(196, 196, 194, 0.4);
+  width: 1%;
+  height: inherit;
+}
+
+.progress {
+  background-color: #A9A9A9;
+  
+}
+
+#playlist .selected{
+  font-size: 2rem;
+  text-shadow: 3px 3px 1em #eae7e7;
+}
+
+/*#playlist .selected::before{ 
+  content: url('./assets/music-note.svg')
+}
+
+#playlist .selected::after{ 
+  content: url('./assets/music-note.svg')
+}*/
+
+/* Events */
+#events{
+  color: #5F5F5F;
+}
+
+ul{
+  list-style: none;
+  padding:0px;
+}
+/* Shop */
+#shop{
+  overflow: hidden;
+}
+
+.tshirt{ 
+  margin: -5rem;
+}
+
+.tshirt-1{ 
+  content: url('./assets/1.png');
+}
+
+.tshirt-2{ 
+  content: url('./assets/2.png');
+}
+
+.tshirt-3{ 
+  content: url('./assets/3.png');
+}
+
+.tshirt-4{ 
+  content: url('./assets/4.png');
+}
+
+.tshirt-5{ 
+  content: url('./assets/5.png');
+}
+
+.tshirt-6{ 
+  content: url('./assets/6.png');
+}
+.Tee{
+  height:35vw;
+  width: 90vw;
+  display: block;
+  background: url('assets/Tees.png');
+  background-repeat: no-repeat;
+  background-size:100% 100%;
+}
+
+/* Contact */
+/*.icons{
+  width: 50vw;
+}*/
+
+.iconsize{
+  font-size: 2.6rem;
+  margin: 0 3vw;
+
+}
+#white-home{
+  color: rgba(255,255,255,1);
+  text-shadow: 0 0 #f70000;
+}
+#white-music{
+  color: rgba(255,255,255,1);
+  text-shadow: 0 0 #f70000;
+}
+#white-events{
+  color: rgba(255,255,255,1);
+  text-shadow: 0 0 #f70000;
+}
+#white-shop{
+  color: rgba(255,255,255,1);
+  text-shadow: 0 0 #f70000;
+}
+#white-contact{
+  color: rgba(255,255,255,1);
+  text-shadow: 0 0 #f70000;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+    color: rgba(255,255,255,1)
+}
