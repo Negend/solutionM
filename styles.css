@@ -234,6 +234,7 @@ p, h5{
 
 .release{
   font-size: 4.5vw;
+  margin: .5rem 0;
   font-family: Arial;
   color: rgb(240,240,240);
 }
