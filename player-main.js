@@ -190,13 +190,13 @@ function duration(){
 // create function that creates clickable event listeners for each tiny div relating current time an maxtime
 
 function createTimer(){
-	for (var i = 0; i < 100; i++){
-		$('.duration').append("<li class='second m-0 p-0'></li>")
+	for (var i = 0; i < 2000; i++){
+		$('.duration').append("<li class='second'></li>")
 	}
 	$('.second').each(function(i){
 		$(this).click(function(){
 			maxT = track.duration
-			track.currentTime = i * 0.01 * maxT
+			track.currentTime = i * 0.0005 * maxT
 		})
 	})
 }
@@ -205,19 +205,18 @@ function createTimer(){
 function progressChange(){
 	// colormoving
 	track.ontimeupdate = function(){
-		var step = track.currentTime/maxT/0.01
+		var step = track.currentTime/maxT/0.0005
 		step = Math.floor(step)		
 		var n
-		var u = 0.1
-		u = step
+		var u = step
 		$('.second').each(function(index){
 			$(this).removeClass('progress')
 			if(index == step ){
 				n = index
-			}
-			for(i=0;i<n;i++){
-				$($('.second')[i]).addClass('progress')
-			}
+				for(i=0;i<n;i++){
+					$($('.second')[i]).addClass('progress')
+				}
+			}		
 		})
 	}
 }
