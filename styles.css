@@ -153,6 +153,7 @@ body {
   .cover-container {
     width: 100%; /* Must be percentage or pixels for horizontal alignment */
   }
+
 }
 
 @media (min-width: 62em) {
@@ -161,7 +162,9 @@ body {
   .cover-container {
     width: 42rem;
   }
+
 }
+
 
 
 /* Body */
@@ -224,7 +227,7 @@ p, h5{
 /* Home */
 .display-1{
   font-family: 'Condiment', cursive;
-  font-size: 14.3vw;
+  font-size:14.3vw;
 }
 
 /* Next Music */
@@ -237,6 +240,14 @@ p, h5{
   margin: .5rem 0;
   font-family: Arial;
   color: rgb(240,240,240);
+}
+@media (min-width: 500px) {
+  .display-1{
+    font-size: 70px;
+  }
+  .release{
+    font-size: 30px;
+  }
 }
 
 /* Player */
@@ -334,18 +345,33 @@ ul{
   content: url('./assets/6.png');
 }
 .Tee{
-  height:35vw;
+  height:45vw;
   width: 90vw;
   display: block;
-  background: url('assets/Tees.png');
+  background: url('assets/TSHITS.png');
   background-repeat: no-repeat;
   background-size:100% 100%;
+  text-align: center;
 }
-
+h4{
+  color:red;
+  margin-top: -4vh;
+}
 /* Contact */
 /*.icons{
   width: 50vw;
 }*/
+.mic{
+  background-size: 100% 100%;
+  background-image: url('assets/handMic.png'); 
+  /*display: inline-block;*/
+  margin-top: 1vh;
+  height: 20vw;
+  width:  20vw;
+  min-width: ;
+  min-height: ;
+  text-align: left;
+}
 
 .iconsize{
   font-size: 2.6rem;
