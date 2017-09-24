@@ -234,9 +234,15 @@ p, h5{
 #music{
   color: #000000;
 }
+.available{
+  font-size: 6vw;
+  margin-top: -5vh;
+  color: #61070c; 
+  text-shadow: 3px 3px 1em rgb(123, 158, 162);
+}
 
 .release{
-  font-size: 4.5vw;
+  font-size: 5vw;
   margin: .5rem 0;
   font-family: Arial;
   color: rgb(240,240,240);
@@ -247,6 +253,10 @@ p, h5{
   }
   .release{
     font-size: 30px;
+  }
+  .available{
+    font-size: 1.5rem;
+    margin-top: 0;
   }
 }
 
@@ -345,7 +355,9 @@ ul{
   content: url('./assets/6.png');
 }
 .Tee{
-  height:45vw;
+  height:55vw;
+  max-height: 75vh;
+  max-width: 122vh;
   width: 90vw;
   display: block;
   background: url('assets/TSHITS.png');
@@ -353,10 +365,7 @@ ul{
   background-size:100% 100%;
   text-align: center;
 }
-h4{
-  color:red;
-  margin-top: -4vh;
-}
+
 /* Contact */
 /*.icons{
   width: 50vw;
