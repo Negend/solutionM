@@ -14,14 +14,14 @@ $(".navbar li a[href^='#']").on('click', function(event) {
 
 
 	timerId = setInterval(function(){	
-	countDown(26,10,2017)
+	countDown(26,09,2017)
 
 	},900)
 
 function countDown(dd,mm,yyyy){
 
 	var t1 = new Date();
-	var t2 = new Date(yyyy, mm, dd, 0, 0, 0, 0);
+	var t2 = new Date(yyyy, (mm-1), dd, 0, 0, 0, 0);
 	var millisecs = t2.getTime() - t1.getTime();
 	var Seconds = Math.floor(millisecs / 1000);
 	var minutes = Math.floor(Seconds/60)
@@ -31,10 +31,10 @@ function countDown(dd,mm,yyyy){
 	var mins = (minutes-(hours * 60))
 	var secs = Math.floor((Seconds-(minutes*60)))
 
-	timeUpdate('day',days)
-	timeUpdate('hrs',hrs)
-	timeUpdate('min',mins)
-	timeUpdate('sec',secs)
+	timeUpdate('Days',days)
+	timeUpdate('Hours',hrs)
+	timeUpdate('Mins',mins)
+	timeUpdate('Secs',secs)
 }
 
 
