@@ -14,7 +14,7 @@ $(".navbar li a[href^='#']").on('click', function(event) {
 
 
 	timerId = setInterval(function(){	
-	countDown(02,05,2018)
+	countDown(26,10,2017)
 
 	},900)
 
@@ -22,17 +22,14 @@ function countDown(dd,mm,yyyy){
 
 	var t1 = new Date();
 	var t2 = new Date(yyyy, mm, dd, 0, 0, 0, 0);
-	var dif = t2.getTime() - t1.getTime();
-
-	var Seconds_from_T1_to_T2 = dif / 1000;
-	var Seconds_Between_Dates = Math.abs(Seconds_from_T1_to_T2);
-	var minutes = Math.floor(Seconds_Between_Dates/60)
+	var millisecs = t2.getTime() - t1.getTime();
+	var Seconds = Math.floor(millisecs / 1000);
+	var minutes = Math.floor(Seconds/60)
 	var hours = Math.floor(minutes/60)
-
 	var days = Math.floor(hours/24)
 	var hrs = hours-(days*24)
 	var mins = (minutes-(hours * 60))
-	var secs = Math.floor((Seconds_Between_Dates-(minutes*60)))
+	var secs = Math.floor((Seconds-(minutes*60)))
 
 	timeUpdate('day',days)
 	timeUpdate('hrs',hrs)
