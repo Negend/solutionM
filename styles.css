@@ -430,7 +430,7 @@ ul{
 .navbar-dark .navbar-nav .nav-link {
     color: rgba(255,255,255,1)
 }
-@media (max-width: 350px){
+@media (max-width: 410px){
   .label{
     font-size: 3vw;
   }
