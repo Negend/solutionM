@@ -14,7 +14,7 @@ $(".navbar li a[href^='#']").on('click', function(event) {
 
 
 	timerId = setInterval(function(){	
-	countDown(26,09,2017)
+	countDown(01,11,2017)
 
 	},900)
 
@@ -41,3 +41,5 @@ function countDown(dd,mm,yyyy){
 function timeUpdate(unit,amount){
 	$('.'+unit).html("<h1 class='tock'>"+amount+"</h1><h6 class ='label'>"+unit+"</h6>")
 }
+
+

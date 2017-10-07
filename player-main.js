@@ -3,33 +3,58 @@ $(function() {
 
 var playing = false
 // t for track number
+var cont
 var t = 0
-var track = new Audio()
+var off = true
+track = new Audio()
 // var track = document.getElementById('player')
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyBnkR4xpp3Cc407tH2TCFxmUvNYy-sprUg",
+    authDomain: "cbxn-87d55.firebaseapp.com",
+    databaseURL: "https://cbxn-87d55.firebaseio.com",
+    projectId: "cbxn-87d55",
+    storageBucket: "gs://cbxn-87d55.appspot.com/",
+    messagingSenderId: "1027649275585"
+  };
+  firebase.initializeApp(config); 
+
+  var storeroot = firebase.storage().ref()
+  var musicroot = storeroot.child('Music')
+ //  var standbyref = musicroot.child('C.N/Standby Final.mp3')
+ //  var pic = storeroot.child('Pictures/Profile/gents.png')
+ //  var standby
+ // 	standbyref.getDownloadURL().then(function(url){
+ //  standby = url
+ //  track.src = url
+ //  console.log(standby)
+	// })
+
+
 
 var tracks = [
-	{
-		song : 'song/yo.ogg',
-		cover : 'song/yo.webp',
-		title : 'Welcome'
-	},
+	// {
+	// 	song : 'song/yo.ogg',
+	// 	cover : 'song/yo.ogg',
+	// 	title : 'Welcome'
+	// },
 	
 	{
-		song:'song/drunk.mpeg',
+		song : 'C.N/Standby Final.mp3',
 		cover : 'song/drunk.mpeg',
-		title:'Drunk Loving'
+		title:'Standby'
 	},
 	
 	{	
-		song:'song/gas.ogg',
+		song : 'Chis/Cheap Guy.mp3',
 		cover : 'song/gas.ogg',
-		title:'Gassed'
-	},
+		title:'Cheap Till I Die'
+	// },
 
-	{	
-		song:'song/prowl.mpeg',
-		cover : 'song/prowl.mpeg',
-		title:"Prowl O' Lion"
+	// {	
+	// 	song:'song/prowl.mpeg',
+	// 	cover : 'song/prowl.mpeg',
+	// 	title:"Prowl O' Lion"
 	}
 ]
 
@@ -57,7 +82,7 @@ function chooseTrack(){
 	$('.track').each(function(i){
 		$('.track'+i).click(function(e){
 			trackUpdate(i)
-			playTrack()
+			playTrack(false)
 		})
 	})
 }
@@ -67,7 +92,7 @@ function chooseTrack(){
 function pausePlay(){	
 	$(".play").click(function(e) { 
 	  if (playing === false) {
-		  playTrack()
+		  playTrack(true)
 		} 
 		else{
 			pauseTrack()
@@ -79,11 +104,11 @@ function pausePlay(){
 
 function nextSong(){	
 	$(".next").click(function(e){
-		var con = false
+		var cont = false
 	// stop whatever is playing 
 		if (playing === true){		
 			pauseTrack()
-			con = true
+			cont = true
 		}
 	// on to the next source on track list
 		t = t + 1
@@ -92,10 +117,9 @@ function nextSong(){
 		}
 	// insert next track
 		trackUpdate(t)
-
 	// if audio was already playing, start playing immediately
-		if (con === true){
-			playTrack()
+		if (cont === true){
+			playTrack(false)
 		}
 		colorTracker()
 	})
@@ -121,9 +145,10 @@ function prevSong(){
 		trackUpdate(t)
 	// if audio was already playing, start playing immediately
 		if (cont === true){
-			playTrack()
+			playTrack(false)
 		}
 		colorTracker()
+		cont = false
 	})
 }
 
@@ -144,8 +169,20 @@ function prevSong(){
 
 
 
-function playTrack(){
-	track.play()
+function playTrack(load){
+	if(off){
+		track.play()
+		off = false
+	}else if(load){	
+				track.play()
+		console.log('i did try to play straight')
+	}else{
+		track.onloadeddata = function(){
+			track.play()
+		}
+		console.log('i did try to play')
+	}
+	
 	playing = true
 }
 
@@ -157,12 +194,15 @@ function pauseTrack(){
 function trackUpdate(number){
 	t = number
 	// insert new disc
-	track.src = tracks[number].song
+	trackName = tracks[number].song
+	musicroot.child(trackName).getDownloadURL().then(function(url){
+  track.src = url
 	$('#download-button').attr('download', tracks[number].title)
-	$('#download-button').attr('href', tracks[number].song)
-var title = tracks[number].title
-	var cover = tracks[number].cover
+	$('#download-button').attr('href', url)
+	})
 	// song title change
+	var title = tracks[number].title
+	var cover = tracks[number].cover
 	$("#track-name").html(title)
 	$(".music-cover").css('background-image',"url("+cover+")")
 	// $(".music-cover").css('background-image',"url("+cover+")")
