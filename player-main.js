@@ -33,11 +33,11 @@ track = new Audio()
 
 
 var tracks = [
-	// {
-	// 	song : 'song/yo.ogg',
-	// 	cover : 'song/yo.ogg',
-	// 	title : 'Welcome'
-	// },
+	{
+		song : 'Chis/Neon Beybe.mpeg',
+		cover : 'song/yo.ogg',
+		title : 'Neon Beybé'
+	},
 	
 	{
 		song : 'C.N/Standby Final.mp3',
@@ -148,7 +148,7 @@ function prevSong(){
 			playTrack(false)
 		}
 		colorTracker()
-		cont = false
+		
 	})
 }
 
@@ -175,12 +175,13 @@ function playTrack(load){
 		off = false
 	}else if(load){	
 				track.play()
-		console.log('i did try to play straight')
+		// console.log('i did try to play straight')
 	}else{
 		track.onloadeddata = function(){
 			track.play()
+			// console.log('loaded')
 		}
-		console.log('i did try to play')
+		
 	}
 	
 	playing = true
@@ -190,7 +191,15 @@ function pauseTrack(){
 	track.pause()
 	playing = false
 }
-
+function buffer(){
+	track.onwaiting = function(){
+		// console.log('buffering')
+	}
+	// track.onplay = function(){
+	// 	console.log('stopped buffering')
+	// }
+}
+buffer()
 function trackUpdate(number){
 	t = number
 	// insert new disc
@@ -199,6 +208,10 @@ function trackUpdate(number){
   track.src = url
 	$('#download-button').attr('download', tracks[number].title)
 	$('#download-button').attr('href', url)
+	//FOR NOW JUST TAKE THEM TO SOUNDCLOUD
+	var b = tracks[number].title
+	c = b.replace(/ /g,'-')
+	$('#share-btn').attr('href', 'https://soundcloud.com/chisbeybexnneji/'+c)
 	})
 	// song title change
 	var title = tracks[number].title
@@ -291,4 +304,13 @@ function lyrics(){
 }
 lyrics()
 
+
+
+
+function buffer(){
+	track.onwaiting = function(){
+		console.log('buffering')
+	}
+}
+buffer()
 })
