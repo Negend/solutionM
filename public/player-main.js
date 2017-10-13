@@ -40,7 +40,7 @@ var tracks = [
 	},
 	
 	{
-		song : 'C.N/Standby Final.mp3',
+		song : 'C.N/Standby.mp3',
 		cover : 'song/drunk.mpeg',
 		title:'Standby'
 	},
@@ -48,7 +48,7 @@ var tracks = [
 	{	
 		song : 'Chis/Cheap Guy.mp3',
 		cover : 'song/gas.ogg',
-		title:'Cheap Till I Die'
+		title:'Cheap. Guy. Till. I. Die.'
 	// },
 
 	// {	
@@ -211,6 +211,7 @@ function trackUpdate(number){
 	//FOR NOW JUST TAKE THEM TO SOUNDCLOUD
 	var b = tracks[number].title
 	c = b.replace(/ /g,'-')
+	c = c.replace(/\./g,'')
 	$('#share-btn').attr('href', 'https://soundcloud.com/chisbeybexnneji/'+c)
 	})
 	// song title change
