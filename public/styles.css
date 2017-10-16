@@ -327,13 +327,14 @@ p, h5{
   text-shadow: 3px 3px 1em #eae7e7;
 }
 
-/*#playlist .selected::before{ 
-  content: url('./assets/music-note.svg')
+#playlist{ 
+  height:30%;
+  overflow:auto;
+  padding:8px;
+
 }
 
-#playlist .selected::after{ 
-  content: url('./assets/music-note.svg')
-}*/
+
 
 /* Events */
 #events{

@@ -36,7 +36,7 @@ var tracks = [
 	{
 		song : 'Chis/Neon Beybe.mpeg',
 		cover : 'song/yo.ogg',
-		title : 'Neon Beybé'
+		title : 'Neon Guts Freestyle'
 	},
 	
 	{
