@@ -451,5 +451,15 @@ ul{
     background-size: 100% 100%;
   }
 }
-
+@media (min-aspect-ratio: 64/35){
+  .full-screen{
+    height: calc(80vw - 56px);    
+  }
+  .full-screen-minus-strip{
+      height: calc(80vw - 56px - 8vw);    
+  }
+  .strip{
+      height: 10vw;    
+  }
+}
  
