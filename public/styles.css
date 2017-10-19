@@ -240,8 +240,6 @@ p, h5{
 .available{
   font-size: 6vw;
   margin-top: -5vh;
-  color: #61070c; 
-  text-shadow: 3px 3px 1em rgb(123, 158, 162);
 }
 
 .release{
@@ -328,11 +326,13 @@ p, h5{
 }
 
 #playlist{ 
-  height:30%;
-  overflow:auto;
-  padding:8px;
-
-}
+  height: 30%;
+  overflow: auto;
+  padding: 8px;
+  background-color: #0a0101;
+  border: 5px solid #e0abab;
+  border-radius: 3px;
+  }
 
 
 
@@ -465,4 +465,5 @@ ul{
 }
 .track{
   font-family: Arial;
+  border-bottom: 3px dashed #61070c;
 }

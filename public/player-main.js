@@ -38,13 +38,6 @@ var tracks = [
 		cover : 'song/yo.ogg',
 		title : 'Neon Guts Freestyle'
 	},
-	
-	{
-		song : 'C.N/Standby.mp3',
-		cover : 'song/drunk.mpeg',
-		title:'Standby'
-	},
-	
 	{	
 		song : 'Chis/Cheap Guy.mp3',
 		cover : 'song/gas.ogg',
@@ -55,6 +48,11 @@ var tracks = [
 	// 	song:'song/prowl.mpeg',
 	// 	cover : 'song/prowl.mpeg',
 	// 	title:"Prowl O' Lion"
+	},
+	{
+		song : 'C.N/Standby.mp3',
+		cover : 'song/drunk.mpeg',
+		title:'Standby'
 	}
 ]
 
