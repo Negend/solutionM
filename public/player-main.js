@@ -173,11 +173,8 @@ function prevSong(){
 
 
 
-function playTrack(load){
-	if(off){
-		track.play()
-		
-	}else if(load){	
+function playTrack(load){ 
+	if(load){	
 				track.play()
 		// console.log('i did try to play straight')
 	}else{
