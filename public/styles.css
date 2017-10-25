@@ -329,7 +329,7 @@ p, h5{
   height: 30%;
   width: 286px;
   overflow: auto;
-  padding:inset 8px;
+  padding: 8px;
   /*background-color: #0a0101;*/
   border: 0.5px solid #e0abab;
   box-shadow: inset 0px 0px 5px 5px black;
