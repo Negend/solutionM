@@ -57,7 +57,6 @@ var tracks = [
 ]
 
 listTracks()
-pausePlay()
 nextSong()
 prevSong()
 chooseTrack()
@@ -79,26 +78,33 @@ function listTracks(){
 function chooseTrack(){
 	$('.track').each(function(i){
 		$('.track'+i).click(function(e){
-			trackUpdate(i)
-			playTrack(false)
+
+			if(i === t){
+				pausePlay()
+				console.log("ioooi")
+			}else{
+				trackUpdate(i)
+				playTrack()
+				console.log("ii")
+			}
+			
 		})
 	})
 }
 
 
-
+	
+$(".play").click(function(e) { 
+	  pausePlay()
+})
 function pausePlay(){	
-	$(".play").click(function(e) { 
-	  if (playing === false) {
-		  playTrack(true)
-		} 
-		else{
-			pauseTrack()
-		}
-	})
+  if (playing === false) {
+	  playTrack(true)
+	} 
+	else{
+		pauseTrack()
+	}
 }
-
-
 
 function nextSong(){	
 	$(".next").click(function(e){
@@ -170,18 +176,18 @@ function prevSong(){
 function playTrack(load){
 	if(off){
 		track.play()
-		off = false
+		
 	}else if(load){	
 				track.play()
 		// console.log('i did try to play straight')
 	}else{
 		track.onloadeddata = function(){
 			track.play()
-			// console.log('loaded')
+			 
 		}
-		
+		console.log('loaded')
 	}
-	
+	off = false
 	playing = true
 }
 
@@ -200,10 +206,17 @@ function buffer(){
 buffer()
 function trackUpdate(number){
 	t = number
+	var sameTrack = false
 	// insert new disc
 	trackName = tracks[number].song
 	musicroot.child(trackName).getDownloadURL().then(function(url){
-  track.src = url
+  if(track.src == url){
+  	console.log('clik')
+  	return sameTrack = true
+  }else{
+  	track.src = url
+  	return sameTrack = false
+	}
 	$('#download-button').attr('download', tracks[number].title)
 	$('#download-button').attr('href', url)
 	//FOR NOW JUST TAKE THEM TO SOUNDCLOUD
@@ -218,6 +231,7 @@ function trackUpdate(number){
 	$("#track-name").html(title)
 	$(".music-cover").css('background-image',"url("+cover+")")
 	// $(".music-cover").css('background-image',"url("+cover+")")
+	
 }
 
 function colorTracker(){
