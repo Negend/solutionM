@@ -332,7 +332,7 @@ p, h5{
   padding: 8px;
   /*background-color: #0a0101;*/
   border: 0.5px solid #e0abab;
-  box-shadow: inset 0px 0px 5px 5px black;
+  /*box-shadow: inset 0px 0px 5px 5px black;*/
   border-radius: 3px;
   z-index: 2;
   }
@@ -469,6 +469,6 @@ ul{
 .track{
   font-family: Arial;
   z-index: -3;
-  text-shadow: 0px 3px 3px black;
+  /*text-shadow: 0px 3px 3px black;*/
   /*border-bottom: 1px solid grey;*/
 }

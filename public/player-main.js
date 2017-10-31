@@ -5,7 +5,6 @@ var playing = false
 // t for track number
 var cont
 var t = 0
-var off = true
 track = new Audio()
 // var track = document.getElementById('player')
   // Initialize Firebase
@@ -33,6 +32,69 @@ track = new Audio()
 
 
 var tracks = [
+	{
+		song : 'Chis/Neon Beybe.mpeg',
+		cover : 'song/yo.ogg',
+		title : 'Neon Guts Freestyle'
+	},
+	{	
+		song : 'Chis/Cheap Guy.mp3',
+		cover : 'song/gas.ogg',
+		title:'Cheap. Guy. Til I. Die.'
+	// },
+
+	// {	
+	// 	song:'song/prowl.mpeg',
+	// 	cover : 'song/prowl.mpeg',
+	// 	title:"Prowl O' Lion"
+	},
+	{
+		song : 'C.N/Standby.mp3',
+		cover : 'song/drunk.mpeg',
+		title:'Standby'
+	},
+	{
+		song : 'Chis/Neon Beybe.mpeg',
+		cover : 'song/yo.ogg',
+		title : 'Neon Guts Freestyle'
+	},
+	{	
+		song : 'Chis/Cheap Guy.mp3',
+		cover : 'song/gas.ogg',
+		title:'Cheap. Guy. Till. I. Die.'
+	// },
+
+	// {	
+	// 	song:'song/prowl.mpeg',
+	// 	cover : 'song/prowl.mpeg',
+	// 	title:"Prowl O' Lion"
+	},
+	{
+		song : 'C.N/Standby.mp3',
+		cover : 'song/drunk.mpeg',
+		title:'Standby'
+	},
+	{
+		song : 'Chis/Neon Beybe.mpeg',
+		cover : 'song/yo.ogg',
+		title : 'Neon Guts Freestyle'
+	},
+	{	
+		song : 'Chis/Cheap Guy.mp3',
+		cover : 'song/gas.ogg',
+		title:'Cheap. Guy. Till. I. Die.'
+	// },
+
+	// {	
+	// 	song:'song/prowl.mpeg',
+	// 	cover : 'song/prowl.mpeg',
+	// 	title:"Prowl O' Lion"
+	},
+	{
+		song : 'C.N/Standby.mp3',
+		cover : 'song/drunk.mpeg',
+		title:'Standby'
+	},
 	{
 		song : 'Chis/Neon Beybe.mpeg',
 		cover : 'song/yo.ogg',
@@ -81,11 +143,9 @@ function chooseTrack(){
 
 			if(i === t){
 				pausePlay()
-				console.log("ioooi")
 			}else{
 				trackUpdate(i)
 				playTrack()
-				console.log("ii")
 			}
 			
 		})
@@ -182,9 +242,7 @@ function playTrack(load){
 			track.play()
 			 
 		}
-		console.log('loaded')
 	}
-	off = false
 	playing = true
 }
 
