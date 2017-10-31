@@ -52,69 +52,6 @@ var tracks = [
 		song : 'C.N/Standby.mp3',
 		cover : 'song/drunk.mpeg',
 		title:'Standby'
-	},
-	{
-		song : 'Chis/Neon Beybe.mpeg',
-		cover : 'song/yo.ogg',
-		title : 'Neon Guts Freestyle'
-	},
-	{	
-		song : 'Chis/Cheap Guy.mp3',
-		cover : 'song/gas.ogg',
-		title:'Cheap. Guy. Till. I. Die.'
-	// },
-
-	// {	
-	// 	song:'song/prowl.mpeg',
-	// 	cover : 'song/prowl.mpeg',
-	// 	title:"Prowl O' Lion"
-	},
-	{
-		song : 'C.N/Standby.mp3',
-		cover : 'song/drunk.mpeg',
-		title:'Standby'
-	},
-	{
-		song : 'Chis/Neon Beybe.mpeg',
-		cover : 'song/yo.ogg',
-		title : 'Neon Guts Freestyle'
-	},
-	{	
-		song : 'Chis/Cheap Guy.mp3',
-		cover : 'song/gas.ogg',
-		title:'Cheap. Guy. Till. I. Die.'
-	// },
-
-	// {	
-	// 	song:'song/prowl.mpeg',
-	// 	cover : 'song/prowl.mpeg',
-	// 	title:"Prowl O' Lion"
-	},
-	{
-		song : 'C.N/Standby.mp3',
-		cover : 'song/drunk.mpeg',
-		title:'Standby'
-	},
-	{
-		song : 'Chis/Neon Beybe.mpeg',
-		cover : 'song/yo.ogg',
-		title : 'Neon Guts Freestyle'
-	},
-	{	
-		song : 'Chis/Cheap Guy.mp3',
-		cover : 'song/gas.ogg',
-		title:'Cheap. Guy. Till. I. Die.'
-	// },
-
-	// {	
-	// 	song:'song/prowl.mpeg',
-	// 	cover : 'song/prowl.mpeg',
-	// 	title:"Prowl O' Lion"
-	},
-	{
-		song : 'C.N/Standby.mp3',
-		cover : 'song/drunk.mpeg',
-		title:'Standby'
 	}
 ]
 
