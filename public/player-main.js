@@ -32,11 +32,7 @@ track = new Audio()
 
 
 var tracks = [
-	{
-		song : 'Chis/Neon Beybe.mpeg',
-		cover : 'song/yo.ogg',
-		title : 'Neon Guts Freestyle'
-	},
+
 	{	
 		song : 'Chis/Cheap Guy.mp3',
 		cover : 'song/gas.ogg',
@@ -47,6 +43,11 @@ var tracks = [
 	// 	song:'song/prowl.mpeg',
 	// 	cover : 'song/prowl.mpeg',
 	// 	title:"Prowl O' Lion"
+	},
+	{
+		song : 'Chis/Neon Beybe.mpeg',
+		cover : 'song/yo.ogg',
+		title : 'Neon Guts Freestyle'
 	},
 	{
 		song : 'C.N/Standby.mp3',
@@ -198,17 +199,15 @@ function buffer(){
 buffer()
 function trackUpdate(number){
 	t = number
+	colorTracker()
 	var sameTrack = false
 	// insert new disc
 	trackName = tracks[number].song
 	musicroot.child(trackName).getDownloadURL().then(function(url){
   if(track.src == url){
-  	console.log('clik')
   	return sameTrack = true
-  }else{
-  	track.src = url
-  	return sameTrack = false
-	}
+  }
+  track.src = url
 	$('#download-button').attr('download', tracks[number].title)
 	$('#download-button').attr('href', url)
 	//FOR NOW JUST TAKE THEM TO SOUNDCLOUD
@@ -222,8 +221,7 @@ function trackUpdate(number){
 	var cover = tracks[number].cover
 	$("#track-name").html(title)
 	$(".music-cover").css('background-image',"url("+cover+")")
-	// $(".music-cover").css('background-image',"url("+cover+")")
-	
+	// $(".music-cover").css('background-image',"url("+cover+")")	
 }
 
 function colorTracker(){
@@ -235,7 +233,7 @@ function colorTracker(){
 
 function oncePlaying(){
 	track.onplay = function(e){
-	 	colorTracker()		
+	 			
 	}
 }
 

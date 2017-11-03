@@ -282,12 +282,15 @@ p, h5{
 
 /* Player */
 .previous{
+  cursor: pointer;
   content: url('./assets/previous.svg')
 }
 .play{
+  cursor: pointer;
   content: url('./assets/play.svg')
 }
 .next{
+  cursor: pointer;
   content: url('./assets/next.svg')
 }
 .download{
@@ -326,6 +329,7 @@ p, h5{
 }
 
 #playlist{ 
+  cursor: pointer;
   height: 30%;
   width: 286px;
   overflow: auto;
