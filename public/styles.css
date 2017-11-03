@@ -473,6 +473,14 @@ ul{
 .track{
   font-family: Arial;
   z-index: -3;
-  /*text-shadow: 0px 3px 3px black;*/
-  /*border-bottom: 1px solid grey;*/
+
+  -moz-user-select: none; 
+  -khtml-user-select: none; 
+  -webkit-user-select: none; 
+  /* Introduced in IE 10. See http://ie.microsoft.com/testdrive/HTML5/msUserSelect/ */ 
+  -ms-user-select: none; 
+  user-select: none; 
+  /* Internet Explorer/Edge */ 
+    /*text-shadow: 0px 3px 3px black;*/
+    /*border-bottom: 1px solid grey;*/
 }
