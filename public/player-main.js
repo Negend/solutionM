@@ -37,12 +37,12 @@ var tracks = [
 		song : 'Chis/Cheap Guy.mp3',
 		cover : 'song/gas.ogg',
 		title:'Cheap. Guy. Til I. Die.'
-	// },
+	},
 
-	// {	
-	// 	song:'song/prowl.mpeg',
-	// 	cover : 'song/prowl.mpeg',
-	// 	title:"Prowl O' Lion"
+	{	
+		song:'song/Prowl O lion.mp3',
+		cover : 'song/prowl.mpeg',
+		title:"Prowl O' Lion"
 	},
 	{
 		song : 'Chis/Neon Beybe.mpeg',
