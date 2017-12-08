@@ -14,7 +14,7 @@ $(".navbar li a[href^='#']").on('click', function(event) {
 
 
 	timerId = setInterval(function(){	
-	countDown(01,11,2017)
+	countDown(22,12,2017)
 
 	},900)
 

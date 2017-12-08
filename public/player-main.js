@@ -40,7 +40,7 @@ var tracks = [
 	},
 
 	{	
-		song:'song/Prowl O lion.mp3',
+		song:'C.N/Prowl O lion.mp3',
 		cover : 'song/prowl.mpeg',
 		title:"Prowl O' Lion"
 	},
